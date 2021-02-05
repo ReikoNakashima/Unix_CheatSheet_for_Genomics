@@ -8,10 +8,12 @@ zcat input.fastq.gz | awk '{if(NR%4==2) print length($1)}' | sort -n | uniq -c >
 
 ```
 
-Read length distribution (mapped reads only) in a bam file
+Read length distribution (mapped reads only) in a bam file. 
 ```
 samtools view -F 4 input.bam | awk '{print length($10)}' > read_length.txt
 ```
 
-
-
+## Remove carriage return in a file
+```
+tr -d '\r' < a_file.txt > new.txt && mv new.txt a_file.txt
+```
