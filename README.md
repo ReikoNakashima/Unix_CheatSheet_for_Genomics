@@ -15,7 +15,7 @@ samtools view -F 4 input.bam | awk '{print length($10)}' > read_length.txt
 
 ## Remove carriage return in a file
 ```
-tr -d '\r' < a_file.txt > new.txt && mv new.txt a_file.txt
+tr -d '\r' < infile.txt > new.txt && mv new.txt infile.txt
 ```
 
 ## Grep a pattern and look up certain lines in a file
@@ -25,4 +25,9 @@ grep -n "CM000681.2_Homo_sapiens_chromosome_19,_GRCh38_re" file.txt
 Looking up lines 100-200
 ```
 awk 'FNR>=100 && FNR<=200' file.txt
+```
+
+## Set permission (read, write, and excecute) for a username
+```
+setfacl -m u:username:rwx Files
 ```
