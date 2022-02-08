@@ -37,3 +37,7 @@ This will return file size for all files in the directory
 ```
 du -h aFolder
 ```
+If you like to see the total size of a directory,
+```
+du -s /home/myFolder
+```
