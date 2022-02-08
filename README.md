@@ -31,3 +31,9 @@ awk 'FNR>=100 && FNR<=200' file.txt
 ```
 setfacl -m u:username:rwx Files
 ```
+
+## Data storage to see file size in a directory
+This will return file size for all files in the directory
+```
+du -h aFolder
+```
