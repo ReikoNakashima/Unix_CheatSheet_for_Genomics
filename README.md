@@ -41,3 +41,7 @@ If you like to see the total size of a directory,
 ```
 du -s /home/myFolder
 ```
+To see the usage in pharmsci project directory
+```
+mmlsquota --block-size auto -j pharmsciARD_ngs gpfs
+```
